@@ -40,6 +40,7 @@ app.get("/",(req,res)=>{
   });
 
 //The endpoint for the webserver ending with /url/emotion
+//Extracting the informtion we need from JSON returned from IBM NLU API as shown on the instructions
 app.get("/url/emotion", (req,res) => {
     let urlToAnalyze = req.query.url
     const analyzeParams = {
